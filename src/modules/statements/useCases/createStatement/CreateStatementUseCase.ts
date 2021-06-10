@@ -33,6 +33,7 @@ export class CreateStatementUseCase {
         user_id,
       });
 
+      console.log(balance, amount);
       if (balance < amount) {
         throw new CreateStatementError.InsufficientFunds();
       }
